@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     // This fetches data directly from your ECS Fargate containers via the ALB!
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/menu`)
+    fetch(`/api/menu`)
       .then((res) => res.json())
       .then((data) => {
         setMenu(data);
